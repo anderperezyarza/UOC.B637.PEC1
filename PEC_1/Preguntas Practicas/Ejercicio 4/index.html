@@ -1,0 +1,23 @@
+<html>
+<body>
+<wg-rectangulo id="rect01"
+style="position:absolute;left:150px;top:100px"
+base="120" altura="100" color="blue"></wg-rectangulo>
+<wg-circulo id="circ01"
+style="position:absolute;left:250px;top:250px"
+radio="50" color="red"></wg-circulo>
+<script src="require.js"></script>
+<script>
+const {Rectangulo} = require('./Rectangulo.js');
+const {Circulo} = require('./Circulo.js');
+// creamos un array de objetos mezclados
+let v = [];
+v[0] = document.getElementById("rect01");
+v[1] = document.getElementById("circ01");
+for (let i = 0; i < v.length; i++) {
+console.log('area = ' + v[i].area() +
+', color = ' + v[i].color);
+}
+</script>
+</body>
+</html>

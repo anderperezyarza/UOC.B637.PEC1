@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+<img src="image.png" style="position:absolute;
+left:150px;top:100px"></div>
+<label
+style="position:absolute;left:605px;top:325px;font-family:arial">
+Temperatura (&#8451;) </label>
+<wg-gauge id="gauge01" value="90"
+style="position:absolute;
+left:560px;top:330px;
+width:100px;height:80px"></wg-gauge>
+<button style="position:absolute;left:290px;top:60px"
+onclick="btnClickUp()">Consigna +10</button>
+<button style="position:absolute;left:440px;top:60px"
+onclick="btnClickDown()">Consigna -10</button>
+<script type="module">
+import {Gauge} from './Gauge.js';
+</script>
+<script>
+let g = document.getElementById('gauge01');;
+function btnClickUp() {
+g.value = g.value + 10;
+}
+function btnClickDown() {
+g.value = g.value - 10;
+}
+</script>
+</body>
+</html>
